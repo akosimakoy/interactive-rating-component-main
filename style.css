@@ -1,0 +1,138 @@
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--Medium-Grey);
+    gap: var(--Gap);
+    height: var(--height);
+}
+.attribution a { 
+    color: var(--White); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--White: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+--Orange: #fc7613;
+--Gap: 1.5rem;
+--height: 2rem;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    background-color: var(--Very-Dark-Blue);
+}
+main {
+    height: calc(100vh - var(--height));
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    color: var(--Light-Grey);
+}
+.rating-card, .thankyou-card {
+    display: grid;
+    max-width: 400px;
+    border-radius: 1rem;
+    background-color: #212832;
+    padding: 2rem;
+    gap: var(--Gap);
+    background: radial-gradient(circle farthest-corner at top center, #212832 25%, #171e28 100%);
+}
+
+.thankyou-card {
+    justify-items: center;
+    text-align: center;
+}
+
+.rating-image {
+    padding: 1rem;
+    border-radius: 100px;
+    background-color: var(--Dark-Blue);
+}
+.rating-title, .thankyou-title {
+    font-size: 2rem;
+    color: var(--White);
+}
+.rating-description, .thankyou-description {
+    line-height: 1.5rem;
+}
+.rating-rates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.rating-rates li {
+    display: flex;
+    width: 3.2rem;
+    border-radius: 100%;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    background-color: var(--Dark-Blue);
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.rating-rates li:hover {
+    background-color: var(--Light-Grey);
+    color: var(--White);
+}
+.rating-rates .active{
+    background-color: var(--Orange);
+    color: var(--White);
+}
+.rating-button {
+    padding: 1rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    color: var(--White);
+    background-color: var(--Orange);
+    border: none;
+    cursor: pointer;
+}
+.rating-button:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+}
+.thankyou-ratings {
+    padding: 0.5rem 1rem;
+    background-color: var(--Dark-Blue);
+    border-radius: 1rem;
+    color: var(--Orange);
+}
+.hidden {
+    display: none;
+}
+input[type="radio"] {
+    display: none;
+  }
+
+  @media (max-width: 320px) {
+    .rating-rates li {
+        width: 2.5rem;
+    }
+    .rating-card, .thankyou-card {
+        max-width: 300px;
+        padding: 1rem;
+    }
+    .rating-image {
+        padding: 0.75rem;
+    }
+    .rating-title, .thankyou-title {
+        font-size: 1.5rem;
+    }
+  }
